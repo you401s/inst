@@ -1,69 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- CSRF Token for Security-->
-        <meta name="csrf-token" content="YLgC4GVHSmzzU4dNLgTXTCJnagm5md3ELf2D8RUN">
+<!doctype html>
+<html lang="ja">
+	<head>
+	<meta charset="utf-8" />
+		<script src="js/jquery.1.8.2.min.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/common.js"></script>
 
-        <title>タイトルを記入</title>
+		<!-- Fonts -->
+		<link rel="dns-prefetch" href="http://fonts.gstatic.com/">
+		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-        <style type="text/css">
-            body,iframe{
-                padding:0;
-                margin:0;
-            }
-            .ppt_view{
-                width:100%;
-                padding:0;
-                margin:0;
-                position:relative;
-            }
-            .bar_hide{
-                width:100%;
-                height:30px;
-                top:-32px;
-                position:relative;
-                background-color:#000;
-            }
-        </style>
+		<!-- Styles -->
+		<link href="css/app.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/swiper.css" rel="stylesheet">
+		<title>
+			インスト
+		</title>
+<style type="text/css">
+	body,iframe{
+		padding:0;
+		margin:0;
+	}
+	.ppt_view{
+		width:100%;
+		padding:0;
+		margin:0;
+		position:relative;
+	}
+	.bar_hide{
+		width:100%;
+		height:30px;
+		top:-32px;
+		position:relative;
+		background-color:#000;
+	}
+</style>
+	</head>
+	<body>
 
-        <!-- Scripts -->
-        <script src="js/jquery.1.8.2.min.js"></script>
-        <script src="js/jquery.cookie.js"></script>
-        <script src="js/common.js"></script>
+		<div class="ppt_view">
+			<div id="app" class="ptlwz">
+				<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="z-index:1000000; opacity:0 ;" attr="">
+					<div class="container">
+						<a class="collapse navbar-collapse" id="navbarSupportedContent">
+							<!-- Left Side Of Navbar -->
+							<ul class="navbar-nav mr-auto">
+							</ul>
+							<!-- Right Side Of Navbar -->
+							<ul class="navbar-nav ml-auto">
+								<!-- Authentication Links -->
+								<li class="nav-item dropdown">
+									<div class="top-item">
+										<a class="dropdown-item" href="home.html">
+											ホーム
+										</a>
+										<a class="dropdown-item" onclick="removeKey();">
+											ログアウト
+										</a>
+									</div>
+								</li>
+							</ul>
+						</a>
+					</div>
+				</nav>
+			</div>
+			<div class="hidden-ppt">
 
-        <!-- Fonts -->
-        <link rel="dns-prefetch" href="http://fonts.gstatic.com/">
-        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-        <!-- CSS Styles -->
-        <link href="css/app.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/swiper.css" rel="stylesheet">
-    </head>
-    <body>
-        <iframe id="ppt" name="ppt"
-        src="https://onedrive.live.com/embed?cid=552678E63C243E8B&amp;resid=552678E63C243E8B%2145580&amp;authkey=ACs1cvIClJEbbkY&amp;em=2&amp;wdAr=1.7777777777777777"
-        width="100%" frameborder="0">
-        </iframe>
-        <div class="bar_hide">
-            <button ></button>
-        </div>
-        <script type="text/javascript">
-            $(function() {
-                height=$(window).height();
-                $("#ppt").height(height);
-                // $(".ppt_view").height(height);
-                //$("#ppt").contents().find("#SlideLabel-Medium14"); 
-                //$(".bar_hide").css("top",(height)+'px');
-                
-                //$('#ppt').contents().find("img.prt_FullScreenAttendee_WhiteGlyph_14x14x32").hide(); 
-                //$('#ppt')
-                //$('#ppt').contents().find("body").hide(); 
-                //frame.contents().find("img.prt_FullScreenAttendee_WhiteGlyph_14x14x32").hide(); 
-            })
-        </script>
-    </body>
+			</div>
+<!--			<div id="iframe">-->
+		  		<iframe id="ppt" name="ppt" src="https://view.officeapps.live.com/op/embed.aspx?src=http://ppt.sayosystem.com/6.pptx&amp;wdAr=1.3333333333333333&amp;zoom=2" width="100%"   frameborder="0"></iframe>
+<!--			</div>-->
+		  <div class="bar_hide">
+				<button ></button>
+		  </div>
+		</div>
+	<script type="text/javascript">
+	
+		$(function() {
+			height=$(window).height();
+			$("#ppt").height(height);
+			$(".ppt_view").height(height);
+			//$("#ppt").contents().find("#SlideLabel-Medium14"); 
+			//$(".bar_hide").css("top",(height)+'px');
+			
+			//$('#ppt').contents().find("img.prt_FullScreenAttendee_WhiteGlyph_14x14x32").hide(); 
+			//$('#ppt')
+			//$('#ppt').contents().find("body").hide(); 
+			//frame.contents().find("img.prt_FullScreenAttendee_WhiteGlyph_14x14x32").hide(); 
+		})
+	</script>
+	</body>
 </html>
