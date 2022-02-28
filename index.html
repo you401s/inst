@@ -7,7 +7,7 @@
         <!-- CSRF Token for Security-->
         <meta name="csrf-token" content="YLgC4GVHSmzzU4dNLgTXTCJnagm5md3ELf2D8RUN">
 
-        <title>タイトルを記入</title>
+        <title>インストテスト</title>
 
         <style type="text/css">
             body,iframe{
@@ -46,7 +46,7 @@
     <body>
         <iframe id="ppt" name="ppt"
         src="https://onedrive.live.com/embed?cid=552678E63C243E8B&amp;resid=552678E63C243E8B%2145580&amp;authkey=ACs1cvIClJEbbkY&amp;em=2&amp;wdAr=1.7777777777777777"
-        height="100%" frameborder="0">
+        width="100%" height="700">
         </iframe>
         <div class="bar_hide">
             <button ></button>
@@ -65,35 +65,7 @@
                 //frame.contents().find("img.prt_FullScreenAttendee_WhiteGlyph_14x14x32").hide(); 
             })
         </script>
-        <script>
-            var change_scale = {
-                "container": 500,
-                "percent": 1,
-                "function": function() {
-                    "use strict";
-                    if (change_scale.percent === window.devicePixelRatio) {
-                        var scale = document.documentElement.clientWidth;
-                        scale = scale / change_scale.container;
-                        scale = "scale(" + scale + ")";
-                        document.body.style.transform = scale;
-                    } else {
-                        change_scale.percent = window.devicePixelRatio;
-                    }
-                }
-            };
-            (function() {
-                "use strict";
-                if (!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/i)) {
-                    if (window.devicePixelRatio !== 1) {
-                        alert("申し訳ございません。スタイルが崩れている可能性があります。恐れ入りますが、倍率を100%に変更後、リロードしてください。")
-                    }
-                }
-                change_scale.function();
-            }());
-            window.addEventListener("resize", function(event) {
-                "use strict";
-                change_scale.function();
-            });
-        </script>
     </body>
 </html>
+
+<form action="https://PJP1-powerpoint.officeapps.live.com/p/PowerPointFrame.aspx?PowerPointView=ReadingView&amp;ui=ja%2DJP&amp;rs=ja%2DJP&amp;WOPISrc=http%3A%2F%2Fpjp1%2Dview%2Dwopi%2Ewopi%2Eonline%2Eoffice%2Enet%3A808%2Foh%2Fwopi%2Ffiles%2F%40%2FwFileId%3FwFileId%3Dhttp%253A%252F%252Fppt%252Esayosystem%252Ecom%253A80%252F4%252Epptx&amp;access_token_ttl=0&amp;wdSlideId=964&amp;wdModeSwitchTime=1644878446842&amp;hid=78a7a819-31e8-4b64-b500-b9cf433ce679" method="post" target="wacframe" id="form2"><input type="hidden" name="access_token" value="1"></form>
